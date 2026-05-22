@@ -573,7 +573,7 @@ func TestAzureProvisioningE2E(t *testing.T) {
 	}
 
 	// In-tree cloud provider is not supported from Kubernetes v1.30.
-	selector := And(Not(OsSelector("amzn2")), Not(VersionSelector("1.30.5", "1.31.1")))
+	selector := And(Not(OsSelector("amzn2", "rhel")), Not(VersionSelector("1.30.5", "1.31.1")))
 
 	// act
 	params := []string{
